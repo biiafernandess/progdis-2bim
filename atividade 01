@@ -1,0 +1,34 @@
+function Celular(marca, modelo, ram, armazenamento, preco) {
+    // Atributos privados
+    let _marca = marca;
+    let _modelo = modelo;
+    let _ram = ram;
+    let _armazenamento = armazenamento;
+    let _preco = preco;
+
+    // Método público para recuperar e exibir o preço
+    this.getPreco = function() {
+        console.log(O preço do ${_marca} ${_modelo} é: R$${_preco});
+        return _preco;
+    };
+
+    // Método público para recuperar e exibir todos os valores
+    this.getDetalhes = function() {
+        console.log(Marca: ${_marca});
+        console.log(Modelo: ${_modelo});
+        console.log(RAM: ${_ram}GB);
+        console.log(Armazenamento: ${_armazenamento}GB);
+        console.log(Preço: R$${_preco});
+    };
+}
+
+// Criando duas instâncias de Celular
+const iphone13 = new Celular("Apple", "iPhone 13", 4, 128, 4999);
+const galaxyS21 = new Celular("Samsung", "Galaxy S21", 8, 256, 3999);
+
+// Chamando os métodos para as duas instâncias
+iphone13.getPreco();
+iphone13.getDetalhes();
+
+galaxyS21.getPreco();
+galaxyS21.getDetalhes();
