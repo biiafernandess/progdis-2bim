@@ -1,0 +1,22 @@
+
+ const boloDeMorango = {
+    nome: "Bolo de Morango",
+    peso: 2.0,
+    preco: 40,
+
+    // Método para aplicar o desconto
+    calcularDesconto: function(desconto) {
+        return this.preco - (this.preco * (desconto / 100));
+    },
+
+    // Método para exibir o nome, preço e preço com desconto
+    exibirDetalhes: function(desconto) {
+        const precoComDesconto = this.calcularDesconto(desconto);
+        console.log(Nome do bolo: ${this.nome});
+        console.log(Preço original: R$${this.preco});
+        console.log(Preço com desconto: R$${precoComDesconto.toFixed(2)});
+    }
+};
+
+// Exibindo detalhes com desconto de 15%
+boloDeMorango.exibirDetalhes(15);
