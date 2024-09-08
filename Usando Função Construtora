@@ -1,0 +1,27 @@
+
+function Bolo(nome, peso, preco) {
+    this.nome = nome;
+    this.peso = peso;
+    this.preco = preco;
+
+    // Método para aplicar o desconto
+    this.calcularDesconto = function(desconto) {
+        return this.preco - (this.preco * (desconto / 100));
+    };
+
+    // Método para exibir o nome, preço e preço com desconto
+    this.exibirDetalhes = function(desconto) {
+        const precoComDesconto = this.calcularDesconto(desconto);
+        console.log(Nome do bolo: ${this.nome});
+        console.log(Preço original: R$${this.preco});
+        console.log(Preço com desconto: R$${precoComDesconto.toFixed(2)});
+    };
+}
+
+// Criando uma instância de bolo
+const boloDeChocolate = new Bolo("Bolo de Chocolate", 1.5, 30);
+
+// Exibindo detalhes com desconto de 10%
+boloDeChocolate.exibirDetalhes(10);
+
+
