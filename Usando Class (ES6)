@@ -1,0 +1,26 @@
+class Bolo {
+    constructor(nome, peso, preco) {
+        this.nome = nome;
+        this.peso = peso;
+        this.preco = preco;
+    }
+
+    // Método para aplicar o desconto
+    calcularDesconto(desconto) {
+        return this.preco - (this.preco * (desconto / 100));
+    }
+
+    // Método para exibir o nome, preço e preço com desconto
+    exibirDetalhes(desconto) {
+        const precoComDesconto = this.calcularDesconto(desconto);
+        console.log(Nome do bolo: ${this.nome});
+        console.log(Preço original: R$${this.preco});
+        console.log(Preço com desconto: R$${precoComDesconto.toFixed(2)});
+    }
+}
+
+// Criando uma instância de bolo
+const boloDeCenoura = new Bolo("Bolo de Cenoura", 1.8, 35);
+
+// Exibindo detalhes com desconto de 20%
+boloDeCenoura.exibirDetalhes(20);
